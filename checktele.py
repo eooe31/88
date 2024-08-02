@@ -51,68 +51,73 @@ def check_user(username):
 
 
 def gen_user(choice):
-    if choice == "حرفين":
+    if choice == "رباعي":
         c = d = random.choices(a)
         d = random.choices(e)
-        f = [c[0], c[0], c[0], d[0], d[0]]
+        f = [c[0], c[0], "_", c[0], d[0]]
         random.shuffle(f)
         username = ''.join(f)
         if username in banned[0]:
             c = d = random.choices(a)
             d = random.choices(e)
-            f = [c[0], c[0], d[0], d[0], d[0]]
+            f = [c[0], d[0], "_", d[0], d[0]]
             random.shuffle(f)
             username = ''.join(f)
         else:
             pass
-    elif choice == "سباعي":
-        c = random.choices(a)
-        d = random.choices(e)
-        f = [c[0], c[0], c[0], c[0], c[0], c[0], d[0]]
-        random.shuffle(f)
-        username = "".join(f)
-    elif choice == "سداسي":
-        c = d = random.choices(e)
-        d = random.choices(e)
-        f = [c[0], d[0], d[0], d[0], d[0], d[0]]
-        random.shuffle(f)
-        username = "".join(f)
-    elif choice == "خير":
-        c = d = random.choices(a)
-        d = random.choices(e)
-        f = [c[0], "_", c[0], "_", d[0]]
-        username = "".join(f)
-
-    elif choice == "نصف":
-        c = d = random.choices(a)
-        d = random.choices(e)
-        f = [c[0], "_", d[0], "_", c[0]]
-        username = "".join(f)
-
-    elif choice == "مكرر":
-        c = d = random.choices(a)
-        d = random.choices(e)
-        f = [c[0], "_", d[0], "_", d[0]]
-        username = "".join(f)
-
-    elif choice == "ثلاثي":
+    elif choice == "بوت":
         c = random.choices(a)
         d = random.choices(e)
         s = random.choices(e)
-        f = [c[0], "_", d[0], "_", s[0]]
+        f = [c[0], s[0], d[0]]
+        random.shuffle(f)
         username = ''.join(f)
-        
-    elif choice == "بوت":
-        c = d = random.choices(a)
-        d = random.choices(e)
-        s = random.choices(e) 
-        f = [c[0], s[0], d[0], "Bot"[0]]
-        username = "".join(f)
-        
-    elif choice == "منصه":
+        username = username+'bot'
+    elif choice == "حروف":
         c = random.choices(a)
         d = random.choices(a)
-        f = [c[0], "888", d[0]]
+        s = random.choices(a)
+        f = [c[0], "_", d[0], "_", s[0]]
+        username = ''.join(f)
+    elif choice == "خير":
+        c = random.choices(a)
+        d = random.choices(a)
+        s = random.choices(b)
+        f = [c[0], "_", d[0], "_", s[0]]
+        username = ''.join(f)
+
+    elif choice == "نصف":
+        c = random.choices(a)
+        d = random.choices(b)
+        s = random.choices(a)
+        f = [c[0], "_", d[0], "_", s[0]]
+        username = ''.join(f)
+
+    elif choice == "بدايه":
+        c = random.choices(a)
+        d = random.choices(b)
+        s = random.choices(b)
+        f = [c[0], "_", d[0], "_", s[0]]
+        username = ''.join(f)
+
+    elif choice == "حرف":
+        c = d = random.choices(a)
+        d = random.choices(e)
+        f = [c[0], c[0], c[0], c[0], d[0]]
+        random.shuffle(f)
+        username = ''.join(f)
+        
+    elif choice == "رقم":
+        c = d = random.choices(e)
+        d = random.choices(a)
+        f = [d[0], c[0], c[0], c[0], c[0]]
+        random.shuffle(f)
+        username = ''.join(f)
+        
+    elif choice == "تيست":
+        c = random.choices(a)
+        d = random.choices(a)
+        f = [c[0], "898", "_", "os5c" d[0]]
         random.shuffle(f)
         username = "".join(f)
     else:
@@ -127,32 +132,32 @@ async def _(event):
 **-- -- -- -- -- -- -- -- --
  الانواع :
  -- -- -- -- - 
- حرفين
- sxxxs - ccxcx - s7s77 - a8a8a
+ رباعي
+ sxs_s - s5s_s - s_555
  -- -- -- -- -- -- -- -- -- -- --
-  سباعي
-  ssssssx
+  بوت 
+  sxcbot
  -- -- -- -- -- 
- سداسي
- sxxxxx
+ حروف
+ s_c_m - d_k_i
   -- -- -- -- --  
   خير
-  s_s_x - s_s_5
+  s_a_6 - s_o_5
  -- -- -- -- --
  نصف 
- s_x_s - s_5_s
+ s_8_x - s_5_g
  -- -- -- -- -- 
- مكرر
- s_x_x - s_5_5
+ بدايه
+ s_1_9 - s_5_8
  -- -- -- -- -- 
- ثلاثي
- s_x_g - s_6_x - x_s_5 - s_5_8
+ حرف
+ ssxss - ss9ss
  -- -- -- -- -- 
- بوت 
- sxcbot
+ رقم
+ sxxxx - s5555
   -- -- -- -- -- 
-  منصه
-  s888x
+  التجربه السورس 
+  `تيست`
    -- -- -- -- -- 
    طريقه الصيد هيه كالتالي
  - .صيد + نوع الصيد تكتب الاسم 
@@ -192,8 +197,8 @@ async def hunterusername(event):
         try:
             ch = await eighthon(
                 functions.channels.CreateChannelRequest(
-                    title="صيد تيم كبينه يابه",
-                    about="تم الصيد يم تيم كبينه",
+                    title="صيد معرفات تيم كبينه",
+                    about="تم الصيد تيم كبينه",
                 )
             )
             ch = ch.updates[1].channel_id
@@ -219,7 +224,7 @@ async def hunterusername(event):
                 )
                 await event.client.send_message(
                     event.chat_id,
-                    f"⌯ تم الصيد !'𓆪\n⎱ UserName: ↣ (@{username}❳!\n⎱ Hunting Log {trys2[0]}\n⎱ by ",
+                    f"⌯ تم الصيد !'\n⎱ UserName: ↣ (@{username}❳",
                 )
                 break
             except telethon.errors.rpcerrorlist.UsernameInvalidError:
@@ -249,7 +254,7 @@ async def hunterusername(event):
         trys[0] += 1
     isclaim.clear()
     isclaim.append("off")
-    await event.client.send_message("@knnnk", "**- تم الصيد  **")
+    await event.client.send_message(event.chat_id, "**- انتهاء الفحص تم الصيد - **")
 
 
 @eighthon.on(events.NewMessage(outgoing=True, pattern=r"\.تثبيت"))
