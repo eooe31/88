@@ -17,7 +17,7 @@ import asyncio
 from telethon import events
 
 a = 'wertyuiopassfghjklzxcvnm'
-b = '123456789'
+b = '1234567890'
 e = 'wertyuiopassfghjklzxcvnm123456789'
 
 banned = []
@@ -51,73 +51,68 @@ def check_user(username):
 
 
 def gen_user(choice):
-    if choice == "رباعي":
+    if choice == "حرفين":
         c = d = random.choices(a)
         d = random.choices(e)
-        f = [c[0], c[0], "_", c[0], d[0]]
+        f = [c[0], c[0], d[0], c[0], d[0]]
         random.shuffle(f)
         username = ''.join(f)
         if username in banned[0]:
             c = d = random.choices(a)
             d = random.choices(e)
-            f = [c[0], d[0], "_", d[0], d[0]]
+            f = [c[0], d[0], c[0], d[0], d[0]]
             random.shuffle(f)
             username = ''.join(f)
         else:
             pass
-    elif choice == "بوت":
-        c = random.choices(a)
-        d = random.choices(e)
-        s = random.choices(e)
-        f = [c[0], s[0], d[0]]
+    elif choice == "حروف":
+        c = d = random.choices(a)
+        d = random.choices(a)
+        f = [c[0], c[0], d[0], c[0], d[0]]
         random.shuffle(f)
         username = ''.join(f)
-        username = username+'bot'
-    elif choice == "حروف":
-        c = random.choices(a)
-        d = random.choices(a)
-        s = random.choices(a)
-        f = [c[0], "_", d[0], "_", s[0]]
+    elif choice == "رقمين":
+        c = d = random.choices(a)
+        d = random.choices(b)
+        f = [c[0], c[0], d[0], c[0], d[0]]
+        random.shuffle(f)
         username = ''.join(f)
-    elif choice == "خير":
-        c = random.choices(a)
-        d = random.choices(a)
-        s = random.choices(b)
-        f = [c[0], "_", d[0], "_", s[0]]
+    elif choice == "ارقام":
+        c = d = random.choices(a)
+        d = random.choices(b)
+        f = [c[0], c[0], d[0], d[0], d[0]]
+        random.shuffle(f)
         username = ''.join(f)
 
     elif choice == "نصف":
-        c = random.choices(a)
-        d = random.choices(b)
-        s = random.choices(a)
-        f = [c[0], "_", d[0], "_", s[0]]
+        c = d = random.choices(a)
+        d = random.choices(e)
+        f = [c[0], "_", d[0], "_", c[0]]
         username = ''.join(f)
 
     elif choice == "بدايه":
-        c = random.choices(a)
-        d = random.choices(b)
-        s = random.choices(b)
-        f = [c[0], "_", d[0], "_", s[0]]
-        username = ''.join(f)
-
-    elif choice == "حرف":
         c = d = random.choices(a)
         d = random.choices(e)
-        f = [c[0], c[0], c[0], c[0], d[0]]
-        random.shuffle(f)
+        f = [c[0], "_", c[0], "_", d[0]]
+        username = ''.join(f)
+
+    elif choice == "خير":
+        c = d = random.choices(a)
+        d = random.choices(e)
+        f = [c[0], "_", d[0], "_", d[0]]
         username = ''.join(f)
         
-    elif choice == "رقم":
+    elif choice == "سداسي":
         c = d = random.choices(e)
-        d = random.choices(a)
-        f = [d[0], c[0], c[0], c[0], c[0]]
+        d = random.choices(e)
+        f = [c[0], c[0], c[0], d[0], c[0], c[0]]
         random.shuffle(f)
         username = ''.join(f)
         
     elif choice == "تيست":
         c = random.choices(a)
-        d = random.choices(a)
-        f = [c[0], "898", "_", "os5c" d[0]]
+        d = random.choices(e)
+        f = [c[0], "89", "_", "os", d[0]]
         random.shuffle(f)
         username = "".join(f)
     else:
@@ -132,29 +127,29 @@ async def _(event):
 **-- -- -- -- -- -- -- -- --
  الانواع :
  -- -- -- -- - 
- رباعي
- sxs_s - s5s_s - s_555
+ حرفين
+ sxxsx - s6s6s
  -- -- -- -- -- -- -- -- -- -- --
-  بوت 
-  sxcbot
+  حروف
+  sxxss - xcccx
  -- -- -- -- -- 
- حروف
- s_c_m - d_k_i
+ رقمين
+ s77ss - c9c9c
   -- -- -- -- --  
-  خير
-  s_a_6 - s_o_5
+  ارقام
+  s6s66 - d777d
  -- -- -- -- --
  نصف 
- s_8_x - s_5_g
+ s_8_s - x_n_x
  -- -- -- -- -- 
  بدايه
- s_1_9 - s_5_8
+ s_s_x - c_c_1
  -- -- -- -- -- 
- حرف
- ssxss - ss9ss
+ خير 
+ s_x_x - s_7_7
  -- -- -- -- -- 
- رقم
- sxxxx - s5555
+ سداسي
+ sxssss
   -- -- -- -- -- 
   التجربه السورس 
   `تيست`
